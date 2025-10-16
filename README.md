@@ -163,10 +163,10 @@ adb devices
 **macOS/Linux:**
 ```bash
 # Preview what will be disabled
-./de-ai-sm-s711u.sh dryrun
+./android-ai-killer.sh dryrun
 
 # Apply the AI disable
-./de-ai-sm-s711u.sh apply
+./android-ai-killer.sh apply
 ```
 
 ---
@@ -196,19 +196,19 @@ adb devices
 **Windows:**
 ```powershell
 # Preview what will be disabled
-bash de-ai-sm-s711u.sh dryrun
+bash android-ai-killer.sh dryrun
 
 # Apply the AI disable
-bash de-ai-sm-s711u.sh apply
+bash android-ai-killer.sh apply
 ```
 
 **macOS/Linux:**
 ```bash
 # Preview what will be disabled
-./de-ai-sm-s711u.sh dryrun
+./android-ai-killer.sh dryrun
 
 # Apply the AI disable
-./de-ai-sm-s711u.sh apply
+./android-ai-killer.sh apply
 ```
 
 ---
@@ -218,7 +218,7 @@ bash de-ai-sm-s711u.sh apply
 ### Available Commands
 
 ```bash
-./de-ai-sm-s711u.sh [command]
+./android-ai-killer.sh [command]
 ```
 
 | Command | Description |
@@ -233,24 +233,28 @@ bash de-ai-sm-s711u.sh apply
 
 ```bash
 # Always test first with dryrun
-./de-ai-sm-s711u.sh dryrun
+./android-ai-killer.sh dryrun
 
 # Apply changes
-./de-ai-sm-s711u.sh apply
+./android-ai-killer.sh apply
 
 # Check what was disabled
-./de-ai-sm-s711u.sh audit
+./android-ai-killer.sh audit
 
 # Rollback to restore AI functionality
-./de-ai-sm-s711u.sh rollback
+./android-ai-killer.sh rollback
 
 # Rollback from specific backup
-./de-ai-sm-s711u.sh rollback /tmp/de-ai-sm-s711u/disabled-packages-1234567890.txt
+./android-ai-killer.sh rollback /tmp/de-ai-sm-s711u/disabled-packages-1234567890.txt
 ```
 
 ---
 
 ## 📱 Supported Devices
+
+**✅ Works on ANY Android Device**
+
+The script is **completely device-agnostic** - it automatically detects your device model, Android version, and adapts accordingly.
 
 **Tested and Confirmed:**
 - Samsung Galaxy S23 FE (SM-S711U)
@@ -258,12 +262,13 @@ bash de-ai-sm-s711u.sh apply
 - Samsung Galaxy Note series
 - Google Pixel devices (all models)
 
-**Should Work On:**
-- Most Android 11+ devices with Google Play Services
-- Any Samsung device with One UI 4.0+
-- Custom ROM devices (AOSP, LineageOS, etc.)
+**Compatible With:**
+- **Any Android 11+ device** with Google Play Services
+- **All Samsung devices** with One UI 4.0+
+- **Custom ROM devices** (AOSP, LineageOS, GrapheneOS, etc.)
+- **Any manufacturer**: Google, Samsung, OnePlus, Xiaomi, Motorola, etc.
 
-The script automatically detects your device and adapts accordingly. Packages not present on your device are safely skipped.
+**How It Works**: The script queries your device for installed packages and only disables what's actually present. Missing packages are safely skipped - no configuration needed!
 
 ---
 
@@ -282,18 +287,18 @@ Rollback is **instant and automatic**:
 
 ```bash
 # Use most recent backup
-./de-ai-sm-s711u.sh rollback
+./android-ai-killer.sh rollback
 
 # Or specify a backup file
-./de-ai-sm-s711u.sh rollback /tmp/de-ai-sm-s711u/disabled-packages-[timestamp].txt
+./android-ai-killer.sh rollback /tmp/android-ai-killer/disabled-packages-[timestamp].txt
 ```
 
 All disabled packages will be re-enabled immediately. No reboot required.
 
 ### Log Files Location
 
-- **Windows**: `C:\Users\[username]\AppData\Local\Temp\de-ai-sm-s711u\`
-- **macOS/Linux**: `/tmp/de-ai-sm-s711u/`
+- **Windows**: `C:\Users\[username]\AppData\Local\Temp\android-ai-killer\`
+- **macOS/Linux**: `/tmp/android-ai-killer/`
 
 Each session creates:
 - `disabled-packages-[timestamp].txt` - Backup for rollback
@@ -342,10 +347,10 @@ Some packages may already be disabled or not present on your device variant. Che
 
 ```bash
 # Windows
-cat C:\Users\[username]\AppData\Local\Temp\de-ai-sm-s711u\log-*.txt
+cat C:\Users\[username]\AppData\Local\Temp\android-ai-killer\log-*.txt
 
 # macOS/Linux
-cat /tmp/de-ai-sm-s711u/log-*.txt
+cat /tmp/android-ai-killer/log-*.txt
 ```
 
 ### WiFi Connection Drops Frequently
@@ -370,7 +375,7 @@ Contributions are welcome! Here's how you can help:
 
 ```bash
 # Run dryrun and share output
-./de-ai-sm-s711u.sh dryrun > my-device-test.txt
+./android-ai-killer.sh dryrun > my-device-test.txt
 
 # Include device info
 adb shell getprop ro.product.model

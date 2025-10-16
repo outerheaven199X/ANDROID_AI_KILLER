@@ -5,7 +5,7 @@ param(
     [string]$Command = "dryrun"
 )
 
-$ScriptPath = "de-ai-sm-s711u.sh"
+$ScriptPath = "android-ai-killer.sh"
 
 Write-Host "Running Android AI Disable Script..." -ForegroundColor Green
 Write-Host "Command: $Command" -ForegroundColor Cyan

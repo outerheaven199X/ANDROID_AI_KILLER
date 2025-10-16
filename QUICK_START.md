@@ -64,19 +64,19 @@ adb devices
 ### Alternative Method (Direct bash):
 ```bash
 # Test what would be affected (safe)
-bash de-ai-sm-s711u.sh dryrun
+bash android-ai-killer.sh dryrun
 
 # Apply the changes
-bash de-ai-sm-s711u.sh apply
+bash android-ai-killer.sh apply
 
 # Check results
-bash de-ai-sm-s711u.sh audit
+bash android-ai-killer.sh audit
 ```
 
 ## Rollback (if needed)
 
 ```bash
-./de-ai-sm-s711u.sh rollback
+./android-ai-killer.sh rollback
 ```
 
 That's it! Your AI assistants are now disabled but can be easily restored.

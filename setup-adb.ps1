@@ -36,6 +36,6 @@ Write-Host "1. Connect your Android phone via USB OR WiFi" -ForegroundColor Whit
 Write-Host "2. Enable USB Debugging in Developer Options" -ForegroundColor White
 Write-Host "3. For WiFi: Enable 'Wireless debugging' in Developer Options" -ForegroundColor White
 Write-Host "4. Run: adb devices" -ForegroundColor White
-Write-Host "5. Run: ./de-ai-sm-s711u.sh dryrun" -ForegroundColor White
+Write-Host "5. Run: ./android-ai-killer.sh dryrun" -ForegroundColor White
 
 Write-Host "`nReady to disable AI on your phone!" -ForegroundColor Green

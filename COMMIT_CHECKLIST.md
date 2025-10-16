@@ -3,7 +3,7 @@
 ## ✅ Files Ready to Commit
 
 ### Core Script Files
-- [x] `de-ai-sm-s711u.sh` - Main AI disable script (160 lines)
+- [x] `android-ai-killer.sh` - Main AI disable script (160 lines)
 - [x] `setup-adb.ps1` - Windows ADB setup script
 - [x] `connect-phone.ps1` - WiFi ADB connection helper
 - [x] `run-script.ps1` - Windows wrapper for main script
@@ -43,7 +43,7 @@ git status
 # Create first commit
 git commit -m "Initial commit: Android AI Killer - Disable AI on Android devices
 
-- Add main script (de-ai-sm-s711u.sh) with USB and WiFi support
+- Add main script (android-ai-killer.sh) with USB and WiFi support
 - Add Windows PowerShell helpers for easy execution
 - Add comprehensive documentation (README, guides)
 - Support for Google Assistant, Gemini, Bixby, Samsung AI

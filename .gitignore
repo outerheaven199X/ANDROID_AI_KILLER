@@ -1,10 +1,10 @@
 # Logs and temporary files
 *.log
-*.txt
 dryrun-output.txt
 
-# Backup directories
+# Backup and log directories
 /tmp/
+android-ai-killer/
 foundry_exports/
 foundry_uploads/
 foundry_cache/

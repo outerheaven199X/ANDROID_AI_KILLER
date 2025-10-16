@@ -55,19 +55,19 @@ adb devices
 ### Step 2: Test the Script (Dry Run)
 ```bash
 # Run the script in dry-run mode to see what packages would be affected
-./de-ai-sm-s711u.sh dryrun
+./android-ai-killer.sh dryrun
 ```
 
 ### Step 3: Apply the AI Disable
 ```bash
 # Actually disable the AI packages
-./de-ai-sm-s711u.sh apply
+./android-ai-killer.sh apply
 ```
 
 ### Step 4: Verify Changes
 ```bash
 # Check what packages are now disabled
-./de-ai-sm-s711u.sh audit
+./android-ai-killer.sh audit
 ```
 
 ## 🔄 Rollback (If Needed)
@@ -76,10 +76,10 @@ If you want to restore the AI functionality:
 
 ```bash
 # Rollback using the most recent backup
-./de-ai-sm-s711u.sh rollback
+./android-ai-killer.sh rollback
 
 # Or specify a specific backup file
-./de-ai-sm-s711u.sh rollback /tmp/de-ai-sm-s711u/disabled-packages-1234567890.txt
+./android-ai-killer.sh rollback /tmp/de-ai-sm-s711u/disabled-packages-1234567890.txt
 ```
 
 ## 🛡 Safety Features
@@ -122,7 +122,7 @@ If you want to restore the AI functionality:
 
 ### Script Permission Errors (Linux/Mac)
 ```bash
-chmod +x de-ai-sm-s711u.sh
+chmod +x android-ai-killer.sh
 ```
 
 ## 📊 Monitoring & Logs
@@ -147,25 +147,25 @@ chmod +x de-ai-sm-s711u.sh
 ### Quick Start
 ```bash
 # 1. Check what would be affected
-./de-ai-sm-s711u.sh dryrun
+./android-ai-killer.sh dryrun
 
 # 2. Apply the changes
-./de-ai-sm-s711u.sh apply
+./android-ai-killer.sh apply
 
 # 3. Verify results
-./de-ai-sm-s711u.sh audit
+./android-ai-killer.sh audit
 ```
 
 ### Advanced Usage
 ```bash
 # Generate DNS block entries for network-level blocking
-./de-ai-sm-s711u.sh dnsblock
+./android-ai-killer.sh dnsblock
 
 # Rollback to specific backup
-./de-ai-sm-s711u.sh rollback /path/to/backup-file.txt
+./android-ai-killer.sh rollback /path/to/backup-file.txt
 
 # Show help
-./de-ai-sm-s711u.sh --help
+./android-ai-killer.sh --help
 ```
 
 ## ⚠️ Important Notes

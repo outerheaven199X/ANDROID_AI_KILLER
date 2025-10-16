@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# de-ai-sm-s711u.sh — Reversibly disable Assistant/Gemini/Bixby surfaces (non-root, user 0)
-# Usage: ./de-ai-sm-s711u.sh [dryrun|apply|rollback [file]|audit|dnsblock]
+# android-ai-killer.sh — Reversibly disable Assistant/Gemini/Bixby surfaces (non-root, user 0)
+# Works on any Android device - automatically detects your device model
+# Usage: ./android-ai-killer.sh [dryrun|apply|rollback [file]|audit|dnsblock]
 
 set -Eeuo pipefail
 IFS=$'\n\t'
 
-LOGDIR="${LOGDIR:-/tmp/de-ai-sm-s711u}"
+LOGDIR="${LOGDIR:-/tmp/android-ai-killer}"
 mkdir -p "$LOGDIR"
 NOW="$(date +%s)"
 BACKUP_FILE="${LOGDIR}/disabled-packages-${NOW}.txt"
